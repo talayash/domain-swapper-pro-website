@@ -1,0 +1,38 @@
+---
+const screenshots = [
+  { src: "/screenshots/popup.png", alt: "Popup interface with folder organization", label: "Popup" },
+  { src: "/screenshots/add-domain.png", alt: "Add domain modal with URL, label, folder, and protocol options", label: "Add Domain" },
+  { src: "/screenshots/settings.png", alt: "Settings page with theme, protocol, and sync options", label: "Settings" },
+  { src: "/screenshots/shortcuts.png", alt: "Keyboard shortcuts configuration", label: "Shortcuts" },
+  { src: "/screenshots/import-export.png", alt: "Import and export configuration page", label: "Import / Export" },
+];
+---
+
+<section id="screenshots" class="py-24">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+        See It in Action
+      </h2>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        A clean, intuitive interface designed to stay out of your way.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {screenshots.map((screenshot) => (
+        <div class="group">
+          <div class="overflow-hidden rounded-xl screenshot-shadow">
+            <img
+              src={screenshot.src}
+              alt={screenshot.alt}
+              class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <p class="text-center text-slate-400 text-sm mt-3">{screenshot.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

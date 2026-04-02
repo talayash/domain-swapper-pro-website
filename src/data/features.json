@@ -1,0 +1,32 @@
+[
+  {
+    "title": "One-Click Domain Swap",
+    "description": "Switch between development, staging, QA, and production environments instantly while preserving the full URL path and query parameters.",
+    "icon": "swap"
+  },
+  {
+    "title": "Folder Organization",
+    "description": "Organize your domains into collapsible folders with custom icons and colors. Supports nested folders for complex project structures.",
+    "icon": "folder"
+  },
+  {
+    "title": "Keyboard Shortcuts",
+    "description": "Open the popup with Alt+D or instantly swap to your last used domain with Alt+Shift+D. Fully customizable shortcuts.",
+    "icon": "keyboard"
+  },
+  {
+    "title": "Smart Protocol Handling",
+    "description": "Configure protocol per domain — force HTTP, HTTPS, or preserve the current protocol. Global Force HTTPS option available.",
+    "icon": "shield"
+  },
+  {
+    "title": "Import & Export",
+    "description": "Backup your entire configuration to JSON and restore it anytime. Easily share setups with your team or transfer between browsers.",
+    "icon": "transfer"
+  },
+  {
+    "title": "Chrome Sync",
+    "description": "Sync your domains and settings across all your Chrome browsers automatically. Your setup follows you everywhere.",
+    "icon": "sync"
+  }
+]

@@ -1,0 +1,25 @@
+---
+const technologies = [
+  { name: "React 18", color: "text-cyan-400" },
+  { name: "TypeScript", color: "text-blue-400" },
+  { name: "Zustand", color: "text-orange-400" },
+  { name: "Vite", color: "text-purple-400" },
+  { name: "Tailwind CSS", color: "text-teal-400" },
+  { name: "Radix UI", color: "text-violet-400" },
+  { name: "Manifest V3", color: "text-green-400" },
+  { name: "Chrome APIs", color: "text-yellow-400" },
+];
+---
+
+<section class="py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h3 class="text-sm font-medium text-slate-500 uppercase tracking-wider mb-6">Built With</h3>
+    <div class="flex flex-wrap justify-center gap-3">
+      {technologies.map((tech) => (
+        <span class={`glass-light px-4 py-2 rounded-full text-sm font-medium ${tech.color}`}>
+          {tech.name}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>

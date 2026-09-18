@@ -1,19 +1,28 @@
 ---
+import { site } from '../data/site';
+
 const year = new Date().getFullYear();
 ---
 
-<footer class="border-t border-slate-800/50 py-8">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2">
-        <img src="/icons/icon.png" alt="Domain Swapper Pro" class="w-5 h-5" />
-        <span class="text-slate-400 text-sm">Domain Swapper Pro</span>
-      </div>
-      <div class="flex items-center gap-6 text-sm text-slate-500">
-        <a href="https://github.com/talayash/domain-swapper-pro" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">GitHub</a>
-        <a href="https://chromewebstore.google.com/detail/domain-swapper-pro/lkjaaifkmcomiaakacfgfggnpckamklp" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">Chrome Web Store</a>
-      </div>
-      <p class="text-slate-600 text-sm">&copy; {year}</p>
-    </div>
+<footer class="mx-auto flex max-w-[1560px] flex-col gap-6 px-5 py-8 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12">
+  <div class="flex flex-wrap items-center gap-3">
+    <img src="/icons/icon.svg" alt="" width="20" height="20" class="h-5 w-5" loading="lazy" />
+    <span class="font-mono text-[11px] uppercase tracking-[0.13em] text-mute">Domain Swapper Pro</span>
+    <span class="border border-signal-line bg-signal-soft px-2 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-signal">
+      Chrome extension
+    </span>
+  </div>
+
+  <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+    <a href={site.chromeWebStoreUrl} target="_blank" rel="noopener noreferrer" class="font-mono text-[11px] uppercase tracking-[0.13em] text-mute transition-colors hover:text-signal">
+      Chrome Web Store
+    </a>
+    <a href={site.githubUrl} target="_blank" rel="noopener noreferrer" class="font-mono text-[11px] uppercase tracking-[0.13em] text-mute transition-colors hover:text-signal">
+      GitHub
+    </a>
+    <a href={site.issuesUrl} target="_blank" rel="noopener noreferrer" class="font-mono text-[11px] uppercase tracking-[0.13em] text-mute transition-colors hover:text-signal">
+      Issues
+    </a>
+    <span class="font-mono text-[11px] uppercase tracking-[0.13em] text-faint">v{site.version} · © {year}</span>
   </div>
 </footer>

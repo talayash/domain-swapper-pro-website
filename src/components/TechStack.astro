@@ -1,25 +1,32 @@
 ---
 const technologies = [
-  { name: "React 18", color: "text-emerald-400" },
-  { name: "TypeScript", color: "text-sky-400" },
-  { name: "Zustand", color: "text-amber-400" },
-  { name: "Vite", color: "text-lime-400" },
-  { name: "Tailwind CSS", color: "text-teal-300" },
-  { name: "Radix UI", color: "text-rose-400" },
-  { name: "Manifest V3", color: "text-green-300" },
-  { name: "Chrome APIs", color: "text-orange-400" },
+  { name: "React 18", chrome: false },
+  { name: "TypeScript", chrome: false },
+  { name: "Zustand", chrome: false },
+  { name: "Vite", chrome: false },
+  { name: "Tailwind CSS", chrome: false },
+  { name: "Radix UI", chrome: false },
+  { name: "Manifest V3", chrome: true },
+  { name: "Chrome APIs", chrome: true },
 ];
 ---
 
-<section class="py-16">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h3 class="text-sm font-medium text-slate-500 uppercase tracking-wider mb-6">Built With</h3>
-    <div class="flex flex-wrap justify-center gap-3">
-      {technologies.map((tech) => (
-        <span class={`glass-light px-4 py-2 rounded-full text-sm font-medium ${tech.color}`}>
-          {tech.name}
-        </span>
-      ))}
+<section class="border-b border-rule">
+  <div class="mx-auto flex max-w-[1560px] flex-col gap-5 px-5 py-12 sm:px-8 lg:flex-row lg:items-center lg:gap-6 lg:px-12">
+    <div class="flex shrink-0 items-center gap-4">
+      <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-dim">Built with</span>
+      <span class="block h-px w-6 bg-rule-2"></span>
     </div>
+    <ul class="flex flex-wrap gap-2.5">
+      {technologies.map((tech) => (
+        <li
+          class={tech.chrome
+            ? "border border-signal-line bg-signal-soft px-3.5 py-2 font-mono text-[11px] tracking-[0.08em] text-signal"
+            : "border border-rule px-3.5 py-2 font-mono text-[11px] tracking-[0.08em] text-mute"}
+        >
+          {tech.name}
+        </li>
+      ))}
+    </ul>
   </div>
 </section>

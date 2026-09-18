@@ -1,37 +1,102 @@
 ---
-const screenshots = [
-  { src: "/screenshots/popup.png", alt: "Popup interface with folder organization", label: "Popup" },
-  { src: "/screenshots/add-domain.png", alt: "Add domain modal with URL, label, folder, and protocol options", label: "Add Domain" },
-  { src: "/screenshots/settings.png", alt: "Settings page with theme, protocol, and sync options", label: "Settings" },
-  { src: "/screenshots/shortcuts.png", alt: "Keyboard shortcuts configuration", label: "Shortcuts" },
-  { src: "/screenshots/import-export.png", alt: "Import and export configuration page", label: "Import / Export" },
+const screens = [
+  {
+    id: "S-01",
+    label: "Popup",
+    meta: "Alt + D",
+    src: "/screenshots/popup.png",
+    alt: "The popup listing saved domains grouped into collapsible folders",
+    width: 359,
+    height: 421,
+    span: "lg:col-span-2",
+    frame: "h-[440px]",
+  },
+  {
+    id: "S-02",
+    label: "Add domain",
+    meta: "Modal",
+    src: "/screenshots/add-domain.png",
+    alt: "Add domain form with URL, label, folder and protocol fields",
+    width: 358,
+    height: 419,
+    span: "lg:col-span-2",
+    frame: "h-[440px]",
+  },
+  {
+    id: "S-03",
+    label: "Settings",
+    meta: "Options page",
+    src: "/screenshots/settings.png",
+    alt: "Settings page with theme, protocol and sync options",
+    width: 807,
+    height: 586,
+    span: "lg:col-span-2",
+    frame: "h-[440px]",
+  },
+  {
+    id: "S-04",
+    label: "Shortcuts",
+    meta: "chrome://extensions",
+    src: "/screenshots/shortcuts.png",
+    alt: "Keyboard shortcut configuration for opening the popup and repeating the last swap",
+    width: 843,
+    height: 555,
+    span: "lg:col-span-3",
+    frame: "h-[360px]",
+  },
+  {
+    id: "S-05",
+    label: "Import / export",
+    meta: "JSON",
+    src: "/screenshots/import-export.png",
+    alt: "Import and export screen for backing the configuration up to a JSON file",
+    width: 796,
+    height: 532,
+    span: "lg:col-span-3",
+    frame: "h-[360px]",
+  },
 ];
 ---
 
-<section id="screenshots" class="py-24">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
-        See It in Action
-      </h2>
-      <p class="text-slate-400 text-lg max-w-2xl mx-auto">
-        A clean, intuitive interface designed to stay out of your way.
+<section id="screens" class="border-b border-rule">
+  <div class="mx-auto max-w-[1560px] px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
+
+    <div class="flex flex-col gap-6 border-b border-rule pb-7 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-3">
+          <span class="font-mono text-[10.5px] uppercase tracking-[0.2em] text-signal">03 / Screens</span>
+          <span class="block h-px w-8 bg-rule-2"></span>
+          <span class="font-mono text-[10.5px] uppercase tracking-[0.2em] text-dim">Popup 359 × 421</span>
+        </div>
+        <h2 class="font-display text-[clamp(2rem,4.5vw,2.875rem)] font-extrabold leading-[1.02] tracking-[-0.03em] text-ink">
+          The whole product<br class="hidden sm:block" /> is one popup.
+        </h2>
+      </div>
+      <p class="max-w-[25rem] text-[15.5px] leading-[1.6] text-mute lg:shrink-0">
+        Everything happens under the toolbar icon. The options pages are there when you need protocol
+        rules, shortcuts or a backup file — and out of the way when you don’t.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {screenshots.map((screenshot) => (
-        <div class="group">
-          <div class="overflow-hidden rounded-xl screenshot-shadow">
+    <div class="rule-grid mt-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-6">
+      {screens.map((screen) => (
+        <figure class={`flex flex-col ${screen.span}`}>
+          <div class="panel-head">
+            <span class="label label-signal">{screen.id} {screen.label}</span>
+            <span class="label">{screen.meta}</span>
+          </div>
+          <div class={`flex items-center justify-center bg-ground p-5 ${screen.frame}`}>
             <img
-              src={screenshot.src}
-              alt={screenshot.alt}
-              class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+              src={screen.src}
+              alt={screen.alt}
+              width={screen.width}
+              height={screen.height}
               loading="lazy"
+              decoding="async"
+              class="max-h-full w-auto max-w-full border border-rule object-contain"
             />
           </div>
-          <p class="text-center text-slate-400 text-sm mt-3">{screenshot.label}</p>
-        </div>
+        </figure>
       ))}
     </div>
   </div>

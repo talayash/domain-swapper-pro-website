@@ -16,7 +16,7 @@
   },
   {
     "title": "Smart Protocol Handling",
-    "description": "Configure protocol per domain — force HTTP, HTTPS, or preserve the current protocol. Global Force HTTPS option available.",
+    "description": "Configure protocol per domain - force HTTP, HTTPS, or preserve the current protocol. Global Force HTTPS option available.",
     "icon": "shield"
   },
   {

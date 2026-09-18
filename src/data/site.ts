@@ -1,6 +1,6 @@
 export const site = {
   name: "Domain Swapper Pro",
-  version: "1.3.0",
+  version: "1.6.0",
   chromeWebStoreUrl:
     "https://chromewebstore.google.com/detail/domain-swapper-pro/lkjaaifkmcomiaakacfgfggnpckamklp",
   githubUrl: "https://github.com/talayash/domain-swapper-pro",
